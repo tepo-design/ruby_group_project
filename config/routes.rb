@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :items
+  #get 'help/help'
+  get 'help', to: 'help#help', as: 'help'
   #get 'newsletter/newsletter'
   get 'newsletter', to: 'newsletter#newsletter', as: 'newsletter'
   get 'newarrivals', to: 'new_arrivals#newarrivals', as: 'newarrivals'

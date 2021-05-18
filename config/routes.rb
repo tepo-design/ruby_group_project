@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :items
+  root 'home#index'
   #get 'help/help'
   get 'help', to: 'help#help', as: 'help'
   #get 'newsletter/newsletter'

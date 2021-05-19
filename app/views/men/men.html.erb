@@ -1,1 +1,17 @@
 <h2><center> Mens </center></h2>
+
+<div class = "grid">
+<% @items.each do |item| %>
+    <div class = "items">
+    <center>
+    <%= item.image_name %>
+    </br>
+    $<%= item.cost %>
+    </br>
+    <div class = "item_image">
+    <%= image_tag(item.url) %>
+    </div>
+    </center>
+  </div>
+  <% end %>
+</div>

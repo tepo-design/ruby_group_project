@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :items
+  resources :emails, only: [:new, :create]
+  
   #get 'help/help'
   get 'help', to: 'help#help', as: 'help'
   #get 'newsletter/newsletter'

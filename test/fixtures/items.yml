@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  image_name: MyString
+  cost: 
+  url: MyString
+  men: false
+  women: false
+  kids: false
+  new_arrivals: false
+  date_added: 2021-05-18 15:47:56
+  popularity: MyString
+  saved: false
+
+two:
+  image_name: MyString
+  cost: 
+  url: MyString
+  men: false
+  women: false
+  kids: false
+  new_arrivals: false
+  date_added: 2021-05-18 15:47:56
+  popularity: MyString
+  saved: false

@@ -1,5 +1,5 @@
 class KidsController < ApplicationController
   def kids
-    @items = Item.all
+    @items = Item.where(kids: "true")
   end
 end

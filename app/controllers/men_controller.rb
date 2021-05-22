@@ -1,5 +1,5 @@
 class MenController < ApplicationController
   def men
-    @items = Item.all
+    @items = Item.where(men: "true")
   end
 end

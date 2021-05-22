@@ -1,6 +1,6 @@
 
 
-    <% form_for(subscriber.new) do |f| %>
+    <% form_for(@subscriber) do |f| %>
         <%= f.text_field :email %>
         <%= f.submit %>
     <% end %>

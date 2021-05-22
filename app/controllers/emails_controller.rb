@@ -8,6 +8,7 @@ class EmailsController < ApplicationController
         @email.request = request
         if @email.deliver
             flash.now[:error] = nil 
+            render :new
         else
             flash.now[:error] = 'Cannot send email.'
             render :new

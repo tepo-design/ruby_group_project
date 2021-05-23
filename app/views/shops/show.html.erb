@@ -1,0 +1,40 @@
+<div class = "single_items">
+<div class = "item">
+<center>
+ 
+    
+            <%= image_tag(@item.url, :size => "300x310") %>
+
+
+            </br>
+            <div class = "item_title">
+            <%= @item.image_name %>
+            </div>
+            $<%= @item.cost %>
+            </br>
+
+
+            <button type="button" class="btn btn-secondary">Save</button>
+            
+
+   <% @items.each do |item| %>
+  <%= form_for @order_item, remote: true do |f|%>
+        <%= f.hidden_field :item_id, :value => item.id %>
+        <div class="number_field">
+        <%= f.number_field :quantity, :value => 1, :min => 1%>
+        </div>
+        <button type="button" class="btn btn-secondary">
+        <%= f.submit "add to cart" %>
+        </button>
+        <% end %>
+    <% break %>
+  <% end %>
+</div>
+</div>
+<center>
+ <div id = "cart">
+        <%= render 'carts/cart'%>
+        </div> 
+</center>
+
+

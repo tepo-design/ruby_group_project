@@ -14,6 +14,9 @@
         <%= image_tag(item.url, :size => "93x92") %>
         </br>
         <button type="button" class="btn btn-secondary">Save</button>
+        <button type="button" class="btn btn-secondary">
+        <%= link_to 'Expand', shop_path(item) %>
+        </button>
         </center>
         </div>
         <% end %>
@@ -41,6 +44,9 @@
         <%= image_tag(item.url, :size => "93x92") %>
         </br>
         <button type="button" class="btn btn-secondary">Save</button>
+        <button type="button" class="btn btn-secondary">
+        <%= link_to 'Expand', shop_path(item) %>
+        </button>
         </center>
     </div>
     <% end %>

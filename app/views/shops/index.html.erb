@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image name</th>
+      <th>Cost</th>
+      <th>Url</th>
+      <th>Men</th>
+      <th>Women</th>
+      <th>Kids</th>
+      <th>New arrivals</th>
+      <th>Date added</th>
+      <th>Popularity</th>
+      <th>Saved</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= item.image_name %></td>
+        <td><%= item.cost %></td>
+        <td><%= item.url %></td>
+        <td><%= item.men %></td>
+        <td><%= item.women %></td>
+        <td><%= item.kids %></td>
+        <td><%= item.new_arrivals %></td>
+        <td><%= item.date_added %></td>
+        <td><%= item.popularity %></td>
+        <td><%= item.saved %></td>
+        <td><%= link_to 'Show', shop_path(item) %></td>
+
+      <td> 
+        <%= form_for @order_item, remote: true do |f|%>
+        <%= f.hidden_field :item_id, :value => item.id %>
+        <%= f.number_field :quantity, :value => 1, :min => 1%>
+        <%= f.submit "add to cart" %>
+        <% end %>
+        </td>
+        
+      
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+ 
+ <div id = "cart">
+    <%= render 'carts/cart'%>
+</div>
+
+

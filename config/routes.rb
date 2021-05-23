@@ -1,6 +1,19 @@
 Rails.application.routes.draw do
+  get 'carts/show'
+  get 'cart/show'
+  get 'shops/index'
+  get 'shops/show'
+  get 'save_item/create'
+  get 'save_item/update'
+  get 'save_item/destory'
   resources :items
   resources :emails, only: [:new, :create]
+  
+  resources :shops, only: [:index, :show]
+
+  resources :order_items
+
+  resource :carts, only:[:show]
 
   #get 'help/help'
   get 'help', to: 'help#help', as: 'help'

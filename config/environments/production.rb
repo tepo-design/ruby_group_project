@@ -99,7 +99,7 @@ Rails.application.configure do
     :address => 'smtp.sendgrid.net',
     :port => '587',
     authentication: :plain,
-    user_name:      'apikey',
+    user_name:      ENV['tessa.podbury@gmail.com'],
     password:       ENV['SENDGRID_API_KEY']
   }
 end

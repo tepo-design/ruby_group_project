@@ -3,9 +3,8 @@ class Email < MailForm::Base
 
     def headers 
         {
-        :subject => "Newsletter Confirmation",
+        :subject => "Thanks for subscribing using the email below!",
         :to => "#{email}",
-        :message => "Thanks for subscribing"
         }
     end
 end

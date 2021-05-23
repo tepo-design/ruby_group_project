@@ -47,8 +47,8 @@ GEM
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
-    autoprefixer-rails (10.2.5.0)
-      execjs (< 2.8.0)
+    autoprefixer-rails (10.2.4.0)
+      execjs
     bindex (0.8.1)
     bootsnap (1.7.5)
       msgpack (~> 1.0)
@@ -80,8 +80,6 @@ GEM
     crass (1.0.6)
     erubi (1.10.0)
     execjs (2.8.1)
-    ffi (1.15.0)
-    execjs (2.7.0)
     ffi (1.15.1)
     ffi (1.15.1-java)
     ffi (1.15.1-x64-mingw32)
@@ -126,6 +124,10 @@ GEM
     nokogiri (1.11.5-x64-mingw32)
       racc (~> 1.4)
     nokogiri (1.11.5-x86-mingw32)
+      racc (~> 1.4)
+    nokogiri (1.11.5-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.11.5-x86_64-linux)
       racc (~> 1.4)
     pg (1.2.3)
     pg (1.2.3-x64-mingw32)
@@ -223,11 +225,11 @@ GEM
 PLATFORMS
   java
   ruby
-  x86_64-darwin-19
-  x86_64-linux
   x64-mingw32
   x86-mingw32
   x86-mswin32
+  x86_64-darwin-19
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)

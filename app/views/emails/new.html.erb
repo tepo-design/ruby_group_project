@@ -1,11 +1,7 @@
-<h1 id="page_title">Subscribe to newsletter!</h1>
+<h1>Subscribe to newsletter!</h1>
         <%= form_for @email do |f| %>
-            
-
             <%= f.label :email %>
             <%= f.text_field :email, required: true %>
-
-
             <%= f.submit 'Subscribe', class: "button" %>
         <% end %>
     

@@ -87,7 +87,7 @@ GEM
       responders
       warden (~> 1.2.3)
     erubi (1.10.0)
-    execjs (2.7.0)
+    execjs (2.8.1)
     ffi (1.15.1)
     ffi (1.15.1-java)
     ffi (1.15.1-x64-mingw32)
@@ -238,6 +238,8 @@ PLATFORMS
   x64-mingw32
   x86-mingw32
   x86-mswin32
+  x86_64-darwin-19
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)
@@ -267,4 +269,4 @@ RUBY VERSION
    ruby 2.7.3p183
 
 BUNDLED WITH
-   2.1.4
+   2.2.17

@@ -1,20 +1,11 @@
-<h1 id="page_title">Say Hello</h1>
+<h1 id="page_title">Subscribe to our newsletter!</h1>
 
     <div class="skinny_wrapper wrapper_padding">
         <%= form_for @email do |f| %>
-            <%= f.label :name %><br>
-            <%= f.text_field :name, required: true %>
-
-            <br>
-
+            
             <%= f.label :email %><br>
             <%= f.text_field :email, required: true %>
 
             <br>
-
-            <%= f.label :message %><br>
-            <%= f.text_field :message, as: :text %>
-
-            <%= f.submit 'Send Message', class: "button" %>
         <% end %>
     

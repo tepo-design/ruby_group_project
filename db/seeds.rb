@@ -19,19 +19,3 @@ Item.create(image_name: 'Womens Jumper', cost: 10.99, url: 'https://radbucket202
 Item.create(image_name: 'Womens Jeans', cost: 10.99, url: 'https://radbucket2021.s3.amazonaws.com/women2.jpeg', men:false, women:true, kids:false, new_arrivals:false, saved:false)
 Item.create(image_name: 'Womens Shorts', cost: 40.99, url: 'https://radbucket2021.s3.amazonaws.com/women3.jpeg', men:false, women:true, kids:false, new_arrivals:false, popularity: 'HIGH', saved:false)
 Item.create(image_name: 'Womens Boots', cost: 21.99, url: 'https://radbucket2021.s3.amazonaws.com/women4.jpeg', men:false, women:true, kids:false, new_arrivals:false, saved:false)
-
-# Item.destroy_all
-
-# Item.create!([{
-#     image_name: 'Kids Tee Shirt', cost: 14.99, url: 'https://radbucket2021.s3.amazonaws.com/kid1.jpeg', men:false, women:false, kids:true, new_arrivals:false, popularity: 'HIGH', saved:false
-# }])
-
-
-
-
-
-
-
-
-
-

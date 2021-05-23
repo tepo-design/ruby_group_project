@@ -1,2 +1,52 @@
-<h1>HomePage#home</h1>
-<p>Find me in app/views/home_page/home.html.erb</p>
+<h2><center> Home </center></h2>
+
+<div class= "random_shop_collection"> 
+<div class="scrollmenu">
+<div class = "hozgrid">
+
+    <% @item.each do |item| %>
+        <div class = "ranitems">
+        <center>
+        <%= item.image_name %>
+        </br>
+        $<%= item.cost %>
+        </br>
+        <%= image_tag(item.url, :size => "93x92") %>
+        </br>
+        <button type="button" class="btn btn-secondary">Save</button>
+        </center>
+        </div>
+        <% end %>
+        </center>
+        </div>
+
+</div>
+</div>
+</div>
+
+
+</div>
+
+<h2 class="big_text"> Top Sellers </h2>
+
+<div class= "top_sellers">  
+    <div class = "grid">
+    <% @pop.each do |item| %>
+        <div class = "items">
+        <center>
+        <%= item.image_name %>
+        </br>
+        $<%= item.cost %>
+        </br>
+        <%= image_tag(item.url, :size => "93x92") %>
+        </br>
+        <button type="button" class="btn btn-secondary">Save</button>
+        </center>
+    </div>
+    <% end %>
+    </div>
+</div>
+
+
+
+

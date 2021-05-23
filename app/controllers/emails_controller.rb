@@ -5,11 +5,10 @@ class EmailsController < ApplicationController
 
     def create
         @email = Email.new(params[:email])
-        @email.request = request
+        #@email.request = request
         if @email.deliver
             render :create
         else
-            flash.now[:error] = 'Cannot send email.'
             render :new
         end
     end

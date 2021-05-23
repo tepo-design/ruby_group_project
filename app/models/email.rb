@@ -1,5 +1,5 @@
 class Email < MailForm::Base
-    attribute :email, :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
+    attribute :email, :validate => /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
 
     def headers 
         {

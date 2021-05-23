@@ -6,7 +6,7 @@ class EmailsController < ApplicationController
     def deliver
         @email = Email.new(params[:email])
         if @email.deliver
-            render :deliver
+            render :create
         else
             render :new
         end

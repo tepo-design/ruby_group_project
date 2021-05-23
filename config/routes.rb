@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   resource :carts, only:[:show]
 
+
   #get 'help/help'
   get 'help', to: 'help#help', as: 'help'
   #get 'newsletter/newsletter'
@@ -33,4 +34,6 @@ Rails.application.routes.draw do
   get 'home', to: 'home_page#home', as: 'home'
   get 'grayscale/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  root to: "home_page#home"
 end

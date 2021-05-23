@@ -100,6 +100,6 @@ Rails.application.configure do
     :port => '587',
     authentication: :plain,
     user_name:      'apikey',
-    password:       Rails.application.secrets.api_key
+    password:       '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'
   }
 end

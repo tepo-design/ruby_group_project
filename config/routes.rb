@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   #get 'saved_list/savedlist'
   get 'savedlist', to: 'saved_list#savedlist', as: 'savedlist'
   #get 'home_page/home'
-  get '/', to: 'home_page#home', as: 'home'
+  get '/', to: 'home_page#home', as: '/'
   get 'home', to: 'home_page#home', as: 'home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

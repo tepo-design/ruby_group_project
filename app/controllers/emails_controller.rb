@@ -3,11 +3,10 @@ class EmailsController < ApplicationController
         @email = Email.new
     end
 
-    def create
+    def deliver
         @email = Email.new(params[:email])
-        #@email.request = request
         if @email.deliver
-            render :create
+            render :deliver
         else
             render :new
         end

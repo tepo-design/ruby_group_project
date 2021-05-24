@@ -1,3 +1,19 @@
+<center>
+<% if current_user %>
+<h2>Current User: <%= current_user.username %> </h2>
+<button type="button" class="btn btn-secondary">
+<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+</button>
+<% else%>
+<button type="button" class="btn btn-secondary">
+<%= link_to "Sign Up", new_user_registration_path%>
+</button>
+<button type="button" class="btn btn-secondary">
+<%= link_to "Sign In", new_user_session_path%>
+</button>
+<% end %>
+</center>
+
 <h2><center> Kids </center></h2>
 
 <div class = "grid">
@@ -10,7 +26,21 @@
     </br>
     <%= image_tag(item.url, :size => "107x98") %>
     </br>
-    <button type="button" class="btn btn-secondary">Save</button>
+
+<% @items.each do |item| %>
+    <%= form_for @order_item, remote: true do |f|%>
+        <%= f.hidden_field :item_id, :value => item.id %>
+        <div class="number_field">
+        <%= f.hidden_field :quantity, :value => 1, :min => 1%>
+        </div>
+        <button type="button" class="btn btn-secondary">
+        <%= f.submit "save" %>
+        </button>
+        <% end %>
+    <% break %>
+  <% end %>
+
+
     <button type="button" class="btn btn-secondary">
     <%= link_to 'Expand', shop_path(item) %>
     </button>
@@ -18,3 +48,9 @@
   </div>
   <% end %>
 </div>
+
+<center>
+ <div id = "cart">
+        <%= render 'carts/cart'%>
+        </div> 
+</center>

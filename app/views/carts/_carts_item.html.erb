@@ -1,3 +1,19 @@
+<center>
+<% if current_user %>
+<h2>Current User: <%= current_user.username %> </h2>
+<button type="button" class="btn btn-secondary">
+<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+</button>
+<% else%>
+<button type="button" class="btn btn-secondary">
+<%= link_to "Sign Up", new_user_registration_path%>
+</button>
+<button type="button" class="btn btn-secondary">
+<%= link_to "Sign In", new_user_session_path%>
+</button>
+<% end %>
+</center>
+
 <div class = "shoppingCart">
 <% @order_items.each do |item| %>
 
@@ -10,18 +26,19 @@
 
    <%= form_for item, remote: true do |f| %>
         <%= f.hidden_field :product_id, :value => item.item.id %>
-        <%= f.number_field :quantity, :value => item.quantity.to_i %>
-        <%= f.submit "Update Card "%>
+        <%= f.hidden_field :quantity, :value => item.quantity.to_i %>
+      
         <%=  link_to "Remove Item", order_item_path(item), method: :delete, remote: true%>
  <% end %>
 
- <h4>Subtotal: <%= item.total %></h4>
-
+<h2>__________________________________</h2>
 <% end %>
+
+
 </center>
 
 </br>
 <center>
-<h3>Total of your whole Shopping Cart: $<%= current_order.subtotal %></h3>
+<h3>You have <%= current_order.order_items.size %> Saved Items</h3>
 </center>
 </div>

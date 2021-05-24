@@ -1,5 +1,23 @@
+<center>
+<% if current_user %>
+<h2>Current User: <%= current_user.username %> </h2>
+<button type="button" class="btn btn-secondary">
+<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+</button>
+<% else%>
+<button type="button" class="btn btn-secondary">
+<%= link_to "Sign Up", new_user_registration_path%>
+</button>
+<button type="button" class="btn btn-secondary">
+<%= link_to "Sign In", new_user_session_path%>
+</button>
+<% end %>
+</center>
+
+
 <p id="notice"><%= notice %></p>
 
+<center>
 <h1>Items</h1>
 
 <table>
@@ -7,41 +25,33 @@
     <tr>
       <th>Image name</th>
       <th>Cost</th>
-      <th>Url</th>
-      <th>Men</th>
-      <th>Women</th>
-      <th>Kids</th>
-      <th>New arrivals</th>
-      <th>Date added</th>
-      <th>Popularity</th>
-      <th>Saved</th>
+      <th>Photo</th>
+
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
+
     <% @items.each do |item| %>
+       
       <tr>
+     
         <td><%= item.image_name %></td>
         <td><%= item.cost %></td>
-        <td><%= item.url %></td>
-        <td><%= item.men %></td>
-        <td><%= item.women %></td>
-        <td><%= item.kids %></td>
-        <td><%= item.new_arrivals %></td>
-        <td><%= item.date_added %></td>
-        <td><%= item.popularity %></td>
-        <td><%= item.saved %></td>
+        <td><%= image_tag(item.url, :size => "130x140") %></td>
+
+        
+  
         <td><%= link_to 'Show', shop_path(item) %></td>
 
       <td> 
         <%= form_for @order_item, remote: true do |f|%>
         <%= f.hidden_field :item_id, :value => item.id %>
-        <%= f.number_field :quantity, :value => 1, :min => 1%>
-        <%= f.submit "add to cart" %>
+        <%= f.hidden_field :quantity, :value => 1, :min => 1%>
+        <%= f.submit "Save Item" %>
         <% end %>
         </td>
-        
       
       </tr>
     <% end %>
@@ -52,6 +62,7 @@
  
  <div id = "cart">
     <%= render 'carts/cart'%>
+
+
+</center>
 </div>
-
-

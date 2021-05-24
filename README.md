@@ -186,4 +186,4 @@ echo "export USERNAME=username" >> ~/.profile
 echo "export PASSWORD=password" >> ~/.profile
 rake db:create rake db:migrate rake db:seed
 
-Git Repo: https://github.com/tepo-design/rad-at1
+Git Repo: https://github.com/tepo-design/RAD2021_s3661626_s3775931

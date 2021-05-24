@@ -1,4 +1,24 @@
+<center>
+<% if current_user %>
+<h2>Welcome <%= current_user.username %> </h2>
+<button type="button" class="btn btn-secondary">
+<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+</button>
+<% else%>
+<button type="button" class="btn btn-secondary">
+<%= link_to "Sign Up", new_user_registration_path%>
+</button>
+<button type="button" class="btn btn-secondary">
+<%= link_to "Sign In", new_user_session_path%>
+</button>
+<% end %>
+</center>
+
+
+
+
 <h2><center> Home </center></h2>
+
 
 <div class= "random_shop_collection"> 
 <div class="scrollmenu">
@@ -8,12 +28,15 @@
         <div class = "ranitems">
         <center>
         <%= item.image_name %>
-        </br>
+        </br> 
         $<%= item.cost %>
         </br>
         <%= image_tag(item.url, :size => "93x92") %>
         </br>
-        <button type="button" class="btn btn-secondary">Save</button>
+     
+        <button type="button" class="btn btn-secondary">
+        <%= link_to 'Expand', shop_path(item) %>
+        </button>
         </center>
         </div>
         <% end %>
@@ -26,6 +49,7 @@
 
 
 </div>
+
 
 <h2 class="big_text"> Top Sellers </h2>
 
@@ -40,7 +64,10 @@
         </br>
         <%= image_tag(item.url, :size => "93x92") %>
         </br>
-        <button type="button" class="btn btn-secondary">Save</button>
+        
+        <button type="button" class="btn btn-secondary">
+        <%= link_to 'Expand', shop_path(item) %>
+        </button>
         </center>
     </div>
     <% end %>
@@ -50,3 +77,8 @@
 
 
 
+<center>
+ <div id = "cart">
+        <%= render 'carts/cart'%>
+        </div> 
+</center>

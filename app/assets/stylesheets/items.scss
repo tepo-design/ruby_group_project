@@ -1,3 +1,23 @@
 // Place all the styles related to the Items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.single_items{
+    width: 98%;
+    height: auto;
+    border: 5px solid black;
+    margin-left: 10px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.item{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.item_title{
+    font-size: 25px;
+    font-weight: bold;
+}

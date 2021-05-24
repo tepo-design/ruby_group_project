@@ -1,0 +1,21 @@
+// Place all the styles related to the Carts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.shoppingCart {
+    width: 98%;
+    height: auto;
+    border: 5px solid black;
+    margin-left: 6px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .cartText{
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .cartGrid{
+        display: grid;
+        grid-template-columns: auto auto ;  
+    }
